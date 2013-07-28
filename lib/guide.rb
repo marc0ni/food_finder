@@ -60,10 +60,10 @@ class Guide
   end
   
   def list
-    puts "\nListing restaurant\n\n".upcase
+    puts "\nListing restaurants\n\n".upcase
     restaurants = Restaurant.saved_restaurants
     restaurants.each do |rest|
-      puts rest.name + "|" + rest.cuisine + "|" + rest.price
+      puts rest.name + "|" + rest.cuisine + "|" + rest.formatted_price
     end
   end
   
@@ -93,3 +93,4 @@ class Guide
   end
     
 end
+
