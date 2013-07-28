@@ -1,5 +1,5 @@
 require 'restaurant'
-
+require 'support/string_extend'
 class Guide
   class Config
     @@actions = ['list', 'find', 'add', 'quit']
@@ -66,9 +66,7 @@ class Guide
   end
   
   def add
-    puts "\nAdd a restaurant\n\n".upcase
-    
-
+    output_action_header("Add a restaurant")
     restaurant = Restaurant.build_from_questions
     
     if restaurant.save
@@ -102,8 +100,8 @@ class Guide
     print " " + "Price".rjust(6) + "\n"
     puts "-" * 60
     restaurants.each do |rest|
-      line = " " << rest.name.ljust(30)
-      line << " " + rest.cuisine.ljust(20)
+      line = " " << rest.name.titleize.ljust(30)
+      line << " " + rest.cuisine.titleize.ljust(20)
       line << " " + rest.formatted_price.rjust(6)
       puts line
     end
