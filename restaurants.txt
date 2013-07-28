@@ -1,3 +1,6 @@
 Hot Tamale	Mexican	5
 Cafe Masala	Indian	30
 pita pocket	fast food	10
+mallard house	new american	35
+quick cup	coffee	5
+taste of italy	pizza	10
